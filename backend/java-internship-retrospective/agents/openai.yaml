@@ -1,0 +1,6 @@
+interface:
+  display_name: "实习日报与复盘"
+  short_description: "汇总每日进度、复盘日报、简历亮点与复盘网页"
+  default_prompt: "Use $java-internship-retrospective to summarize my completed work and update my daily progress, retrospective, and resume highlights."
+policy:
+  allow_implicit_invocation: true

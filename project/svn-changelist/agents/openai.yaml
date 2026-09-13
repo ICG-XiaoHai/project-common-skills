@@ -1,0 +1,4 @@
+interface:
+  display_name: "SVN Changelist"
+  short_description: "整理任意项目的 SVN Changelist 并生成提交说明"
+  default_prompt: "使用 `$svn-changelist 整理本次任务的 SVN Changelist，并告诉我提交说明。"

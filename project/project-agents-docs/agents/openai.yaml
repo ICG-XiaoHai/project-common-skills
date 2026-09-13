@@ -1,0 +1,4 @@
+interface:
+  display_name: 项目规范与文档治理
+  short_description: 生成 AGENTS.md 与 docs 文档规范
+  default_prompt: 使用 $project-agents-docs 为当前项目扫描并维护 AGENTS.md，建立需求、技术设计和 RESTful API 文档治理规范。

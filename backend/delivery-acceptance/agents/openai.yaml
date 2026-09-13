@@ -1,0 +1,7 @@
+interface:
+  display_name: "交付验收助手"
+  short_description: "基于代码证据生成前端联调、日志和数据库验收清单"
+  default_prompt: "使用 $delivery-acceptance 基于本次功能改动生成交付验收清单。"
+
+policy:
+  allow_implicit_invocation: true

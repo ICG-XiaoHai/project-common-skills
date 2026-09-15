@@ -28,6 +28,29 @@ Prepare an SVN submission for any project. Never execute `svn commit`.
 
 ## Commit Message
 
+最终 message 格式（用户约定，2026-09）：`<zentao id> <需求描述> <Conventional Commits 原文>`。
+
+### 生成前必须询问
+
+生成提交 message 前，必须先向用户询问以下两项，不得自行猜测：
+
+1. **zentao id**：本次需求的禅道编号。
+2. **需求描述**：本次需求的简短描述（作为 message 前缀）。
+
+用户未提供或不确定时，对应部分标"待补充"，不得编造。
+
+- 取得 zentao id 与需求描述后，若当前工作区存在 `docs/active/` 需求目录体系（遵循仓库 AGENTS.md 的 docs 工作流：先读 `docs/CHANGELOG.md` 定位对应需求目录，不得编造目录），应将：
+  - zentao id 写入对应 `docs/active/<需求目录>/README.md` 的 YAML `zentao` 字段；
+  - 需求描述写入对应 `PLAN.md` 的需求描述处。
+  使提交 message 与需求文档保持一致；未提供时维持"待补充"。
+
+### message 拼接规则
+
+- 单行版：`<zentao id> <需求描述> <type>(<scope>): <说明>`
+- 多行版：第一行为 `<zentao id> <需求描述>`，随后是 Conventional Commits 标题行，正文用条目列出主要变更（可含"待执行"的一次性脚本等运维说明）。
+
+### Conventional Commits 原文部分
+
 默认使用 Conventional Commits 风格：`<type>(<scope>): <说明>`。
 
 - `feat`：新增或调整用户可感知的功能、规则或协议能力。

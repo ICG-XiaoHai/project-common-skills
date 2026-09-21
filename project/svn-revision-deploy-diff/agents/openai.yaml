@@ -1,0 +1,4 @@
+interface:
+  display_name: "SVN 部署差异"
+  short_description: "对比 SVN Revision 并输出需上传的 JAR 和 CSV"
+  default_prompt: "使用 $svn-revision-deploy-diff 对比上次更新 Revision 和当前 Revision 的服务端变更，只告诉我需要上传的 JAR、CSV，以及需要删除的部署文件。"

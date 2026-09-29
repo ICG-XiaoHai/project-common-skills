@@ -16,8 +16,10 @@ Prepare an SVN submission for any project. Never execute `svn commit`.
 5. Create a concise task-based Changelist name:
 
    ```powershell
-   svn changelist "<name>" -- <task-file-1> <task-file-2>
+   svn changelist "<english-name>" -- <task-file-1> <task-file-2>
    ```
+
+   Changelist names must use English letters, digits, ASCII hyphens, and underscores only. Do not use Chinese or other non-ASCII characters, because the current SVN environment may display or persist them as garbled text. The commit message may remain in Chinese according to the project convention.
 
 6. Verify with `svn status --changelist "<name>"`. Remove unchanged files from the Changelist.
 7. If the task files are already committed, report the revision when discoverable and do not create an empty group.
